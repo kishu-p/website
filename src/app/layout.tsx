@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import FloatingHearts from "@/animationComp/floating-hearts";
+import Footer from "@/comp/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
+         <div className="fixed inset-0 pointer-events-none z-40">
+          <FloatingHearts />
+        </div>
         {children}
+        <Footer />  
       </body>
     </html>
   );
