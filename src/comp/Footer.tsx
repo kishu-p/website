@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="bg-black bottom-0 left-0 right-0 backdrop-blur-sm border-t border-white">
+    <footer className="bottom-0 left-0 right-0 backdrop-blur-sm border-t border-white">
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           {/* Love message with hearts - First Row */}

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FloatingHearts from "@/animationComp/floating-hearts";
+import FloatingHearts from "@/animationComp/FloatingHearts";
 import Footer from "@/comp/Footer";
+import StickeyCornerGif from "@/comp/gif/StickeyCornerGif";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,13 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen antialiased bg-black`}
       >
-         <div className="fixed inset-0 pointer-events-none z-40">
+        <div className="fixed inset-0 pointer-events-none z-40">
           <FloatingHearts />
         </div>
         {children}
-        <Footer />  
+        {/* Single Sticky GIF in Right Corner - appears on all pages */}
+        <StickeyCornerGif />
+        <Footer />
       </body>
     </html>
   );

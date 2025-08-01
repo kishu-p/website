@@ -10,8 +10,8 @@ const ThirdPage = () => {
     <div className="min-h-screen bg-black relative overflow-hidden">
       {/* Top-left buttons */}
       <div className="fixed top-4 left-4 space-x-2 z-50">
-      <Link href={"/bddy"}>
-          <Button className="rounded-sm shadow-lg backdrop-blur-sm font-sans">
+      <Link href={"/surprise"}>
+          <Button className="rounded-sm shadow-lg backdrop-blur-sm font-sans cursor-pointer">
             {" "}
             <ArrowLeft className="w-5 h-5" />
           </Button>

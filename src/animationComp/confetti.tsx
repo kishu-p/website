@@ -5,7 +5,6 @@ import type React from "react";
 import confetti from "canvas-confetti";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 interface ConfettiSideCannonsProps {
   children?: React.ReactNode;
@@ -18,14 +17,7 @@ export function ConfettiSideCannons({
 }: ConfettiSideCannonsProps) {
   const handleClick = () => {
     const end = Date.now() + 3 * 1000; // 3 seconds
-    const colors = [
-"#ffd700",
-// "#ff6b6b",
-
-"#9370db",
-
-    // "#ff4500",
-];
+    const colors = ["#ffd700", "#da223b"];
 
     const frame = () => {
       if (Date.now() > end) return;
@@ -63,9 +55,9 @@ export function ConfettiSideCannons({
 
   return (
     <div className="relative">
-      <Button variant={"outline"} onClick={handleClick} className={cn(className)}>
+      <div onClick={handleClick} className={cn(className)}>
         {children}
-      </Button>
+      </div>
     </div>
   );
 }

@@ -1,9 +1,10 @@
 "use client";
-import ConfettiSideCannons from "@/animationComp/confetti";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 import React from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const FirstPage = () => {
   return (
@@ -34,7 +35,7 @@ const FirstPage = () => {
               repeat: Number.POSITIVE_INFINITY,
             }}
           >
-            Someone Special Has a Surprise!
+            I have a surprise for my favorite person!🌸
           </motion.h1>{" "}
           🎊
         </div>
@@ -44,18 +45,30 @@ const FirstPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          Click the button below to reveal your surprise!{" "}
+          To aaiye aur sath me celebrate krte hai{" "}
         </motion.p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Link href={"/bddy"}>
-            <ConfettiSideCannons className="flex items-center cursor-pointer">
-              <div className="absolute mr-30 mb-8 text-3xl -rotate-45 select-none">
+          <Link href={"/happy"}>
+            <div className="relative inline-block">
+              {/* 🎀 Bow emoji positioned at top-left of the button */}
+              <div className="absolute -top-3 -left-3 text-2xl -rotate-45 select-none z-10">
                 🎀
               </div>
-              Reveal Surprise
-            </ConfettiSideCannons>
+
+              {/* Button */}
+              <Button variant="outline" className="relative z-0 cursor-pointer">
+                Reveal Surprise
+              </Button>
+            </div>
           </Link>
         </motion.div>
+        <Image
+          src="/gifs/bubu-love.gif"
+          alt="Bubu Dudu Love"
+          width={180}
+          height={180}
+          className="rounded-xl shadow-lg"
+        />
       </main>
     </div>
   );
